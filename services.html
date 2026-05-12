@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services · IndiaYatra</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="index.html" class="logo">
+      <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html"      class="nav-link">Home</a>
+      <a href="about.html"      class="nav-link">About</a>
+      <a href="services.html"   class="nav-link active">Services</a>
+      <a href="calculator.html" class="nav-link">Fare Calc</a>
+      <a href="feedback.html"   class="nav-link">Feedback</a>
+      <a href="auth.html"       class="btn-nav">Login / Register</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <span class="label-tag">Get Around</span>
+    <h1><span class="script-sm">Six</span> Modes of Travel</h1>
+    <p>Choose the mode that fits your journey — from the last mile to cross-country adventures.</p>
+  </div>
+
+  <!-- ===== VEHICLE CARDS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="text-align:left;">
+        <h2 class="section-title">All Transport Options</h2>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-bar">
+        <i class="fas fa-magnifying-glass filter-icon"></i>
+        <input type="text" id="filterInput" class="filter-input" placeholder="Filter: bus, cab, auto, metro, train, plane…"/>
+      </div>
+
+      <div class="vehicle-grid" id="vehicleGrid">
+
+        <!-- BUS -->
+        <div class="vehicle-card" data-name="bus">
+          <div class="vc-top"><span class="vc-emoji">🚌</span><span class="rate-badge">₹5/km</span></div>
+          <h3>Bus</h3>
+          <select class="service-select">
+            <option>Unjha → Mehsana</option>
+            <option>Ahmedabad → Surat</option>
+            <option>Surat → Mumbai</option>
+            <option>Mehsana → Ahmedabad</option>
+            <option>Unjha → Palanpur</option>
+            <option>Gandhinagar → Palanpur</option>
+          </select>
+          <div class="info-tag"><i class="fas fa-clock"></i> Every 15 min · ₹25 base</div>
+        </div>
+
+        <!-- CAB -->
+        <div class="vehicle-card" data-name="cab">
+          <div class="vc-top"><span class="vc-emoji">🚕</span><span class="rate-badge">₹12/km</span></div>
+          <h3>Cab</h3>
+          <select class="service-select">
+            <option>Ola Mini · ₹12/km</option>
+            <option>Uber Go · ₹14/km</option>
+            <option>Meru · ₹16/km</option>
+          </select>
+          <div class="info-tag"><i class="fas fa-circle-check"></i> Base ₹50 · 24/7</div>
+        </div>
+
+        <!-- AUTO -->
+        <div class="vehicle-card" data-name="auto">
+          <div class="vc-top"><span class="vc-emoji">🛺</span><span class="rate-badge">₹10/km</span></div>
+          <h3>Auto</h3>
+          <select class="service-select">
+            <option>Shared Auto · ₹10/km</option>
+            <option>Private Auto · ₹15/km</option>
+          </select>
+          <div class="info-tag"><i class="fas fa-gauge"></i> Min ₹25 · Meter</div>
+        </div>
+
+        <!-- METRO -->
+        <div class="vehicle-card" data-name="metro">
+          <div class="vc-top"><span class="vc-emoji">🚇</span><span class="rate-badge">₹10+</span></div>
+          <h3>Metro</h3>
+          <div class="info-tag" style="margin-bottom:0.5rem;"><i class="fas fa-clock"></i> 06:30 – 23:00</div>
+          <div class="info-tag"><i class="fas fa-bolt"></i> Every 5 min · AC coaches</div>
+        </div>
+
+        <!-- TRAIN -->
+        <div class="vehicle-card" data-name="train">
+          <div class="vc-top"><span class="vc-emoji">🚂</span><span class="rate-badge">₹6/km</span></div>
+          <h3>Local Train</h3>
+          <select class="service-select">
+            <option>Gandhidham–Jodhpur Express</option>
+            <option>Ahmedabad–Bhuj Namo Bharat</option>
+            <option>Vadodara–Ahmedabad Intercity</option>
+            <option>Valsad–Dahod Intercity Express</option>
+            <option>Sabarmati–Veraval Vande Bharat</option>
+          </select>
+          <div class="info-tag"><i class="fas fa-train"></i> Next: 5:42 PM · ₹15</div>
+        </div>
+
+        <!-- PLANE -->
+        <div class="vehicle-card" data-name="plane">
+          <div class="vc-top"><span class="vc-emoji">✈️</span><span class="rate-badge">₹2,999+</span></div>
+          <h3>Flight</h3>
+          <select class="service-select">
+            <option>Delhi → Mumbai · 2h</option>
+            <option>Ahmedabad → Jamnagar</option>
+            <option>Ahmedabad → Bhuj</option>
+            <option>Ahmedabad → Rajkot</option>
+            <option>Ahmedabad → Surat</option>
+            <option>Surat → Mumbai</option>
+          </select>
+          <div class="info-tag"><i class="fas fa-plane-departure"></i> Book 2 weeks early</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXTRA TOOLS ===== -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">More Tools</span>
+        <h2 class="section-title">Book &amp; <span class="script-sm">Connect</span></h2>
+        <p class="section-sub">Quick booking demo, help desk, and route lookup — all in one place.</p>
+      </div>
+
+      <div class="extras-grid">
+
+        <!-- BOOKING DEMO -->
+        <div class="extra-card">
+          <h3><div class="card-icon" style="display:inline-flex;margin-right:0.5rem;"><i class="fas fa-ticket-alt"></i></div> Book Demo</h3>
+          <div class="form-group">
+            <label>Passenger Name</label>
+            <input type="text" class="form-input" id="passName" placeholder="e.g. Rohan Patel"/>
+          </div>
+          <div class="form-group">
+            <label>Mode</label>
+            <select class="form-input" id="tripMode">
+              <option>Bus</option><option>Cab</option><option>Auto</option>
+              <option>Metro</option><option>Train</option><option>Flight</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Travel Date</label>
+            <input type="date" class="form-input" id="tripDate"/>
+          </div>
+          <button class="btn btn-primary full-btn" id="bookBtn"><i class="fas fa-check"></i> Confirm Booking</button>
+          <div class="fb-success" id="bookSuccess"><i class="fas fa-circle-check"></i> Booking confirmed! Check your email.</div>
+        </div>
+
+        <!-- HELP DESK -->
+        <div class="extra-card">
+          <h3><div class="card-icon" style="display:inline-flex;margin-right:0.5rem;"><i class="fas fa-headset"></i></div> Help Desk</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-input" id="helpName" placeholder="Your name"/>
+          </div>
+          <div class="form-group">
+            <label>Topic</label>
+            <select class="form-input" id="helpTopic">
+              <option>Road / Bus</option>
+              <option>Train / Metro</option>
+              <option>Flight / Airport</option>
+              <option>Booking / Payment</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-input" id="helpMsg" rows="3" placeholder="Describe your issue…"></textarea>
+          </div>
+          <button class="btn btn-outline-dark full-btn" id="helpBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div class="fb-success" id="helpSuccess"><i class="fas fa-circle-check"></i> Message sent! We'll reply within 2 hrs.</div>
+        </div>
+
+        <!-- QUICK CALC -->
+        <div class="extra-card">
+          <h3><div class="card-icon" style="display:inline-flex;margin-right:0.5rem;"><i class="fas fa-calculator"></i></div> Quick Fare</h3>
+          <div class="form-group">
+            <label>Vehicle Type</label>
+            <select class="form-input" id="vehicleType">
+              <option value="bus">🚌 Bus (₹5/km)</option>
+              <option value="cab">🚕 Cab (₹12/km)</option>
+              <option value="auto">🛺 Auto (₹10/km)</option>
+              <option value="metro">🚇 Metro (₹4/km)</option>
+              <option value="train">🚂 Train (₹6/km)</option>
+              <option value="plane">✈️ Plane (₹20/km)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Distance (km)</label>
+            <input type="number" class="form-input" id="distKm" placeholder="e.g. 25" min="1"/>
+          </div>
+          <button class="btn btn-primary full-btn" id="calcFareBtn"><i class="fas fa-calculator"></i> Calculate</button>
+          <p class="fare-amount" id="fareDisplay" style="font-size:2rem;margin-top:1rem;">₹ --</p>
+          <p class="fare-note" id="fareNote"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo" style="justify-content:center;margin-bottom:0.5rem;">
+        <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+      </div>
+      <p class="footer-tagline">Har safar ko banaye aasan — Bharat ke har kone tak</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="calculator.html">Fare Calc</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="auth.html">Login</a>
+      </div>
+      <p class="footer-copy">© 2025 IndiaYatra · Made with <i class="fas fa-heart"></i> in India</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

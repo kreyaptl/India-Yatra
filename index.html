@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home · IndiaYatra</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="index.html" class="logo">
+      <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html"      class="nav-link active">Home</a>
+      <a href="about.html"      class="nav-link">About</a>
+      <a href="services.html"   class="nav-link">Services</a>
+      <a href="calculator.html" class="nav-link">Fare Calc</a>
+      <a href="feedback.html"   class="nav-link">Feedback</a>
+      <a href="auth.html"       class="btn-nav">Login / Register</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">✦ Discover the Heart of India ✦</p>
+      <h1 class="hero-title">
+        <span class="script">Bharat</span>Routes
+      </h1>
+      <p class="hero-desc">Har safar ko banaye aasan — Bharat ke har kone tak</p>
+      <div class="hero-btns">
+        <a href="services.html"   class="btn btn-primary"><i class="fas fa-compass"></i> Explore Services</a>
+        <a href="calculator.html" class="btn btn-outline"><i class="fas fa-calculator"></i> Calculate Fare</a>
+      </div>
+
+      <!-- Quick Search Widget -->
+      <div class="search-widget">
+        <div class="search-tabs">
+          <button class="stab active"><i class="fas fa-bus"></i> Bus</button>
+          <button class="stab"><i class="fas fa-train"></i> Train</button>
+          <button class="stab"><i class="fas fa-taxi"></i> Cab</button>
+          <button class="stab"><i class="fas fa-plane"></i> Flight</button>
+        </div>
+        <div class="search-fields">
+          <div class="sf-group">
+            <label>From</label>
+            <input type="text" placeholder="e.g. Unjha" class="sf-input"/>
+          </div>
+          <button class="swap-btn" title="Swap"><i class="fas fa-arrow-right-arrow-left"></i></button>
+          <div class="sf-group">
+            <label>To</label>
+            <input type="text" placeholder="e.g. Ahmedabad" class="sf-input"/>
+          </div>
+          <div class="sf-group">
+            <label>Date</label>
+            <input type="date" class="sf-input"/>
+          </div>
+          <a href="services.html"><button class="btn-search">Search <i class="fas fa-arrow-right"></i></button></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <div class="stats-strip">
+    <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Routes</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">28</span><span class="stat-label">States Covered</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">6</span><span class="stat-label">Transport Modes</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">1L+</span><span class="stat-label">Happy Travellers</span></div>
+  </div>
+
+  <!-- ===== QUICK SERVICES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">Get Around</span>
+        <h2 class="section-title">Travel <span class="script-sm">Your Way</span></h2>
+        <p class="section-sub">Six transport modes for every kind of journey — from the last mile to cross-country.</p>
+      </div>
+      <div class="vehicle-grid">
+        <a href="services.html" class="vehicle-card" data-name="bus">
+          <div class="vc-top"><span class="vc-emoji">🚌</span><span class="rate-badge">₹5/km</span></div>
+          <h3>State Bus</h3>
+          <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:0.75rem;">Affordable & frequent across all states</p>
+          <div class="info-tag"><i class="fas fa-clock"></i> Every 15 min · ₹25 base</div>
+        </a>
+        <a href="services.html" class="vehicle-card" data-name="cab">
+          <div class="vc-top"><span class="vc-emoji">🚕</span><span class="rate-badge">₹12/km</span></div>
+          <h3>Cab / Taxi</h3>
+          <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:0.75rem;">Door-to-door convenience, anytime</p>
+          <div class="info-tag"><i class="fas fa-circle-check"></i> Base ₹50 · 24/7</div>
+        </a>
+        <a href="services.html" class="vehicle-card" data-name="auto">
+          <div class="vc-top"><span class="vc-emoji">🛺</span><span class="rate-badge">₹10/km</span></div>
+          <h3>Auto Rickshaw</h3>
+          <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:0.75rem;">Best for short city hops</p>
+          <div class="info-tag"><i class="fas fa-gauge"></i> Min ₹25 · Meter</div>
+        </a>
+        <a href="services.html" class="vehicle-card" data-name="metro">
+          <div class="vc-top"><span class="vc-emoji">🚇</span><span class="rate-badge">₹4/km</span></div>
+          <h3>Metro Rail</h3>
+          <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:0.75rem;">Fastest urban transit, AC coaches</p>
+          <div class="info-tag"><i class="fas fa-bolt"></i> Every 5 min</div>
+        </a>
+        <a href="services.html" class="vehicle-card" data-name="train">
+          <div class="vc-top"><span class="vc-emoji">🚂</span><span class="rate-badge">₹6/km</span></div>
+          <h3>Train</h3>
+          <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:0.75rem;">Long-distance comfort across India</p>
+          <div class="info-tag"><i class="fas fa-train"></i> Next: 5:42 PM</div>
+        </a>
+        <a href="services.html" class="vehicle-card" data-name="plane">
+          <div class="vc-top"><span class="vc-emoji">✈️</span><span class="rate-badge">₹2,999+</span></div>
+          <h3>Flight</h3>
+          <p style="font-size:0.88rem;color:var(--text-soft);margin-bottom:0.75rem;">Cross-country in hours</p>
+          <div class="info-tag"><i class="fas fa-plane-departure"></i> Book 2 weeks early</div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="services.html" class="btn btn-outline-dark">View All Services <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR DESTINATIONS ===== -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">Explore India</span>
+        <h2 class="section-title"><span class="script-sm">Popular</span> Destinations</h2>
+        <p class="section-sub">Handpicked journeys that travellers love most.</p>
+      </div>
+      <div class="dest-grid">
+        <div class="dest-card">
+          <div class="dest-img" style="background:linear-gradient(135deg,#C97C5B,#8B4513);"><i class="fas fa-monument"></i></div>
+          <div class="dest-info"><h3>Rajasthan</h3><p>Palaces, Deserts &amp; Forts</p><span class="dest-tag">Most Popular</span></div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-img" style="background:linear-gradient(135deg,#2E8B57,#1a5c35);"><i class="fas fa-water"></i></div>
+          <div class="dest-info"><h3>Kerala</h3><p>Backwaters &amp; Beaches</p></div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-img" style="background:linear-gradient(135deg,#4682B4,#1a3c6e);"><i class="fas fa-mountain"></i></div>
+          <div class="dest-info"><h3>Himachal</h3><p>Mountains &amp; Valleys</p></div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-img" style="background:linear-gradient(135deg,#9370DB,#5a2d82);"><i class="fas fa-om"></i></div>
+          <div class="dest-info"><h3>Varanasi</h3><p>Ghats &amp; Spirituality</p></div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-img" style="background:linear-gradient(135deg,#D4A017,#8B6914);"><i class="fas fa-sun"></i></div>
+          <div class="dest-info"><h3>Goa</h3><p>Beaches &amp; Nightlife</p><span class="dest-tag">Trending</span></div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-img" style="background:linear-gradient(135deg,#8A9E7E,#4a6a40);"><i class="fas fa-leaf"></i></div>
+          <div class="dest-info"><h3>Coorg</h3><p>Coffee Estates &amp; Mist</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">Why IndiaYatra</span>
+        <h2 class="section-title">Travel <span class="script-sm">Smarter</span></h2>
+        <p class="section-sub">We make every journey seamless, affordable, and memorable.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Safe &amp; Trusted</h3>
+          <p>All transport partners are verified, rated, and insured — your safety is our priority.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-rupee-sign"></i></div>
+          <h3>Best Fares</h3>
+          <p>Transparent pricing with no hidden charges. Compare fares instantly across all modes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated support team available round the clock to assist you on your journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo" style="justify-content:center;margin-bottom:0.5rem;">
+        <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+      </div>
+      <p class="footer-tagline">Har safar ko banaye aasan — Bharat ke har kone tak</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="calculator.html">Fare Calc</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="auth.html">Login</a>
+      </div>
+      <p class="footer-copy">© 2025 IndiaYatra · Made with <i class="fas fa-heart"></i> in India</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

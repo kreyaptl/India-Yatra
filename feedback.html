@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback · IndiaYatra</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="index.html" class="logo">
+      <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html"      class="nav-link">Home</a>
+      <a href="about.html"      class="nav-link">About</a>
+      <a href="services.html"   class="nav-link">Services</a>
+      <a href="calculator.html" class="nav-link">Fare Calc</a>
+      <a href="feedback.html"   class="nav-link active">Feedback</a>
+      <a href="auth.html"       class="btn-nav">Login / Register</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <span class="label-tag">Your Voice Matters</span>
+    <h1>Share Your <span class="script-sm">Experience</span></h1>
+    <p>Help us improve — your feedback shapes our service and delights fellow travellers.</p>
+  </div>
+
+  <!-- ===== FEEDBACK + TESTIMONIALS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="feedback-wrapper">
+
+        <!-- FORM -->
+        <div class="feedback-card">
+          <p class="stars-label">Rate your experience</p>
+          <div class="stars" id="stars">
+            <i class="far fa-star" data-val="1"></i>
+            <i class="far fa-star" data-val="2"></i>
+            <i class="far fa-star" data-val="3"></i>
+            <i class="far fa-star" data-val="4"></i>
+            <i class="far fa-star" data-val="5"></i>
+          </div>
+          <p class="star-caption" id="starCaption">Tap a star to rate</p>
+
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="fbName" class="form-input" placeholder="e.g. Priya Mehta"/>
+          </div>
+          <div class="form-group">
+            <label>Transport Used</label>
+            <select class="form-input">
+              <option>Bus</option><option>Cab</option><option>Auto</option>
+              <option>Metro</option><option>Train</option><option>Flight</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="fbMsg" class="form-input" rows="4" placeholder="Tell us about your journey…"></textarea>
+          </div>
+          <button class="btn btn-primary full-btn" id="fbSubmit">
+            <i class="fas fa-paper-plane"></i> Submit Feedback
+          </button>
+          <div class="fb-success" id="fbSuccess">
+            <i class="fas fa-circle-check"></i> Thank you! Your feedback has been received.
+          </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="testimonials-col">
+          <h2 class="section-title" style="margin-bottom:1.5rem;font-size:1.6rem;">What Travellers <span class="script-sm">Say</span></h2>
+
+          <div class="testimonial-card">
+            <div class="tc-header">
+              <div class="tc-avatar">PM</div>
+              <div>
+                <div class="tc-name">Priya Mehta</div>
+                <div class="tc-location"><i class="fas fa-location-dot"></i> Ahmedabad, Gujarat</div>
+              </div>
+            </div>
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="tc-text">"IndiaYatra made my Rajasthan trip planning so easy. Booked train from Ahmedabad and the fare calculator was spot on. Highly recommend!"</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="tc-header">
+              <div class="tc-avatar" style="background:linear-gradient(135deg,#4682B4,#1a3c6e);">RS</div>
+              <div>
+                <div class="tc-name">Rohan Shah</div>
+                <div class="tc-location"><i class="fas fa-location-dot"></i> Surat, Gujarat</div>
+              </div>
+            </div>
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <p class="tc-text">"The cab booking feature saved me so much time in Mumbai. Clean interface, accurate rates, and quick support when I needed it."</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="tc-header">
+              <div class="tc-avatar" style="background:linear-gradient(135deg,#8A9E7E,#4a6a40);">NK</div>
+              <div>
+                <div class="tc-name">Neha Kulkarni</div>
+                <div class="tc-location"><i class="fas fa-location-dot"></i> Pune, Maharashtra</div>
+              </div>
+            </div>
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="tc-text">"Excellent platform! Used the metro route finder for Delhi trip. Everything worked perfectly. Will use again for my Kerala backwater tour."</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="tc-header">
+              <div class="tc-avatar" style="background:linear-gradient(135deg,#9370DB,#5a2d82);">AR</div>
+              <div>
+                <div class="tc-name">Arjun Rathore</div>
+                <div class="tc-location"><i class="fas fa-location-dot"></i> Jaipur, Rajasthan</div>
+              </div>
+            </div>
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+            </div>
+            <p class="tc-text">"The auto rickshaw booking for short city hops is brilliant. Transparent pricing, no haggling. This is how travel should be in India."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo" style="justify-content:center;margin-bottom:0.5rem;">
+        <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+      </div>
+      <p class="footer-tagline">Har safar ko banaye aasan — Bharat ke har kone tak</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="calculator.html">Fare Calc</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="auth.html">Login</a>
+      </div>
+      <p class="footer-copy">© 2025 IndiaYatra · Made with <i class="fas fa-heart"></i> in India</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

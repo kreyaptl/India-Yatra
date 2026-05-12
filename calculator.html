@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fare Calculator · IndiaYatra</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="index.html" class="logo">
+      <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html"      class="nav-link">Home</a>
+      <a href="about.html"      class="nav-link">About</a>
+      <a href="services.html"   class="nav-link">Services</a>
+      <a href="calculator.html" class="nav-link active">Fare Calc</a>
+      <a href="feedback.html"   class="nav-link">Feedback</a>
+      <a href="auth.html"       class="btn-nav">Login / Register</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <span class="label-tag">Budget Smart</span>
+    <h1><span class="script-sm">Fare</span> Calculator</h1>
+    <p>Pick your transport mode and distance — get an instant fare estimate.</p>
+  </div>
+
+  <!-- ===== CALCULATOR ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="fare-wrapper">
+        <div class="fare-card">
+          <div class="form-group">
+            <label>Vehicle Type</label>
+            <select id="vehicleType" class="form-input">
+              <option value="bus">🚌 Bus (₹5/km)</option>
+              <option value="cab">🚕 Cab (₹12/km)</option>
+              <option value="auto">🛺 Auto (₹10/km)</option>
+              <option value="metro">🚇 Metro (₹4/km)</option>
+              <option value="train">🚂 Train (₹6/km)</option>
+              <option value="plane">✈️ Plane (₹20/km)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Distance (km)</label>
+            <input type="number" id="distKm" class="form-input" placeholder="e.g. 25" min="1"/>
+          </div>
+          <div class="form-group">
+            <label>From City</label>
+            <input type="text" class="form-input" placeholder="e.g. Unjha"/>
+          </div>
+          <div class="form-group">
+            <label>To City</label>
+            <input type="text" class="form-input" placeholder="e.g. Ahmedabad"/>
+          </div>
+          <button class="btn btn-primary full-btn" id="calcFareBtn">
+            <i class="fas fa-calculator"></i> Calculate Fare
+          </button>
+        </div>
+
+        <div class="fare-result-card" id="fareResultCard">
+          <div class="fare-icon"><i class="fas fa-receipt"></i></div>
+          <p class="fare-label">Estimated Fare</p>
+          <p class="fare-amount" id="fareDisplay">₹ --</p>
+          <p class="fare-note" id="fareNote">Enter distance and click calculate</p>
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);width:100%;text-align:left;">
+            <p style="font-size:0.8rem;color:var(--text-muted);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.75rem;">Fare Breakdown</p>
+            <div id="fareBreakdown" style="font-size:0.88rem;color:var(--text-soft);line-height:2;">
+              <p>Base fare: <strong id="baseFare">—</strong></p>
+              <p>Per km rate: <strong id="perKm">—</strong></p>
+              <p>Distance: <strong id="distOut">—</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RATE CARDS ===== -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">Quick Reference</span>
+        <h2 class="section-title">All <span class="script-sm">Rates</span></h2>
+        <p class="section-sub">Standard per-kilometre rates across all transport modes.</p>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card"><div class="rc-emoji">🚌</div><div class="rc-name">Bus</div><div class="rc-rate">₹5/km</div></div>
+        <div class="rate-card"><div class="rc-emoji">🚕</div><div class="rc-name">Cab</div><div class="rc-rate">₹12/km</div></div>
+        <div class="rate-card"><div class="rc-emoji">🛺</div><div class="rc-name">Auto</div><div class="rc-rate">₹10/km</div></div>
+        <div class="rate-card"><div class="rc-emoji">🚇</div><div class="rc-name">Metro</div><div class="rc-rate">₹4/km</div></div>
+        <div class="rate-card"><div class="rc-emoji">🚂</div><div class="rc-name">Train</div><div class="rc-rate">₹6/km</div></div>
+        <div class="rate-card"><div class="rc-emoji">✈️</div><div class="rc-name">Flight</div><div class="rc-rate">₹20/km</div></div>
+      </div>
+      <p style="text-align:center;font-size:0.82rem;color:var(--text-muted);margin-top:1.5rem;">* Rates are indicative. Actual fares may vary based on operator, time, and route.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo" style="justify-content:center;margin-bottom:0.5rem;">
+        <span class="logo-india">India</span><span class="logo-yatra">Yatra</span>
+      </div>
+      <p class="footer-tagline">Har safar ko banaye aasan — Bharat ke har kone tak</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="calculator.html">Fare Calc</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="auth.html">Login</a>
+      </div>
+      <p class="footer-copy">© 2025 IndiaYatra · Made with <i class="fas fa-heart"></i> in India</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
