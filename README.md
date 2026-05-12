@@ -12,7 +12,7 @@
 ## 📖 Project Overview
 **IndiaYatra** is a comprehensive, responsive web application designed to bridge the gap between local commutes and cross-country adventures. It provides a unified platform where users can explore destinations, plan journeys, and calculate fares across six major modes of transport: Bus, Cab, Auto, Metro, Train, and Flight.
 
-![Project Screenshot]<img width="937" height="443" alt="Screenshot" src="https://github.com/user-attachments/assets/9bbba0ac-ed27-4257-9910-9596cbe66bba" />
+<img width="937" height="443" alt="Screenshot" src="https://github.com/user-attachments/assets/9bbba0ac-ed27-4257-9910-9596cbe66bba" />
 
 
 ---
